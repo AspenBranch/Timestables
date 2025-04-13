@@ -1,0 +1,218 @@
+body {
+  background-color: white;
+  transition: background-color 0.4s;
+}
+
+div {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+button {
+  background-color: white;
+  color: black;
+  border-radius: 100px;
+  margin: 10px;
+  font-size: 1em;
+  font-family: "fredoka one";
+  padding: 16px 40px;
+  border: 4px solid #4CAF50;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Start screen */
+#startContainer {
+  font-family: "quicksand";
+}
+
+h1 {
+  font-family: "fredoka one";
+  font-size: 6em;
+  color: #4CAF50;
+}
+
+.label {
+  font-size: 1.8em;
+  text-align: right;
+  width: 55%;
+}
+
+.inputText {
+  text-align: left;
+  padding-left: 10px;
+}
+
+input[type=text] {
+  padding: 2px 2px;
+  margin: 4px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-family: "quicksand";
+  font-size: 1.6em;
+  text-align: center;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  margin: 3px 0;
+}
+
+#hover {
+  position: relative;
+  text-align: left;
+}
+
+#hoverIcon {
+  color: #4CAF50;
+  font-size: 2.2em;
+}
+
+#popup {
+  visibility: hidden;
+  width: 120px;
+  font-size: 0.8em;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 200%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+#hover:hover #popup {
+  visibility: visible;
+  opacity: 1;
+}
+
+#startButton {
+  margin: 20px;
+  font-size: 1.8em;
+}
+
+/* Countdown */
+#countingContainer {
+  font-family: "anton";
+  font-size: 5em;
+}
+
+#counting {
+  animation: fontShrink 1.2s infinite ease-out;
+}
+
+/* Multiplication test */
+#multiplyContainer {
+  font-family: "quicksand";
+  font-size: 20em;
+  color: white;
+}
+
+#multiplySymbol {
+  text-align: center;
+  width: 200px;
+  transform-origin: 50% 58%;
+  animation: rotate 2s infinite linear;
+}
+
+#leftNumber {
+  text-align: right;
+  direction: rtl;
+  animation: fade 2s infinite linear;
+}
+
+#rightNumber {
+  text-align: left;
+  animation: fade 2s infinite linear;
+}
+
+/* Answers screen */
+#answersContainer {
+  font-family: "quicksand";
+  font-size: 2.4em;
+  color: white;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+.leftAnswer {
+  text-align: right;
+}
+
+.rightAnswer {
+  text-align: left;
+  width: 60px;
+}
+
+.times {
+  text-align: center;
+  width: 20px;
+}
+
+.equals {
+  width: 30px;
+}
+
+.actualAnswer {
+  text-align: left;
+}
+
+#answersButton {
+  top: 50%;
+  left: 50%;
+  font-size: 0.6em;
+  position: fixed;
+  transform: translate(-50%, -50%);
+}
+
+#againButton {
+  font-size: 0.6em;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(45deg);
+  }
+  5%, 95% {
+    transform: rotateZ(90deg);
+  }
+  100% {
+    transform: rotateZ(135deg);
+  }
+}
+@keyframes fade {
+  0%, 100% {
+    opacity: 0;
+  }
+  15%, 85% {
+    opacity: 1;
+  }
+}
+@keyframes fontShrink {
+  0%, 100% {
+    font-size: 0pt;
+  }
+  30%, 70% {
+    font-size: 300pt;
+  }
+}

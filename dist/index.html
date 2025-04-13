@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Times Tables</title>
+  <script src="https://use.fontawesome.com/b597ff5d16.js"></script><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:700|Anton|Fredoka+One|Roboto+Condensed|Quicksand:500|Passion+One|Bowlby+One+SC'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body> 
+
+  <!--Start screen-->
+  <div id="startContainer">
+    <h1>Times Tables</h1>
+   
+    <table id="settingsTable">
+      <tr>
+        <td class="label">Smallest number:</td>
+        <td class="inputText"><input type="text" id="minimum" size="3" value="0"></td>
+      </tr>
+      <tr>
+        <td class="label">Biggest number:</td>
+        <td class="inputText"><input type="text" id="maximum" size="3" value="12"></td>
+      </tr>
+      <tr>
+        <td class="label">Number of times:</td>
+        <td class="inputText"><input type="text" id="quantity" size="3" value="20"></td>
+      </tr>
+      <tr>
+        <td class="label">Seconds per:</td>
+        <td class="inputText"><input type="text" id="time" size="3" value="2"></td>
+      </tr>
+      <tr>
+        <td class="label">Practise these:</td>
+        <td class="inputText" id="multipleText"><input type="text" id="multiples" size="8" value="2,5,9"> 
+          <span id="hover">
+            <i id="hoverIcon" class="fa fa-question-circle" aria-hidden="true"></i>
+            <span id="popup">Enter the multiples to practise, separated by a comma, or leave the field blank to practise all of them.</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <button id="startButton">Start</button>
+</div>
+
+  <!--Countdown-->
+  <div id="countingContainer">
+    <p id="counting"></p>
+  </div>
+
+  <!--Multiplication test-->
+  <div id="multiplyContainer">
+    <table id="multiplyTable">
+      <tr>
+        <td id="leftNumber" class="animate"></td>
+        <td id="multiplySymbol" class="animate">&times</td>
+        <td id="rightNumber" class="animate"></td>
+      </tr>
+    </table>  
+  </div>
+
+  <!--Answers screen-->
+  <div id="answersContainer">
+    <button id="answersButton">Show answers</button>
+    <table id="answersTable"></table>
+    <button id="againButton">Again</button>
+  </div>
+  
+<!--<audio id="tick" src="https://www.soundjay.com/button/sounds/button-24.wav" autostart="false"></audio>
+<audio id="explosion" src="https://www.soundjay.com/mechanical/sounds/explosion-01.wav" autostart="false"></audio>-->
+  
+</body>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
